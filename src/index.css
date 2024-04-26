@@ -1,0 +1,1306 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Rose:wght@300..700&display=swap');
+
+
+
+select.noAppearance {
+  -webkit-appearance: none;
+}
+
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+.mainCoponent{
+  width: 100%;
+  height: 100vh;
+  background-color: #E1E9FD;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+/* login page css start */
+
+/* **************************************************** */
+.loginMainBox{
+  width: 95%;
+  height: 90%;
+  background-color: white;
+  margin:auto;
+  border-radius: 40px;
+  /* filter:drop-shadow(0,1.2,50.92 ,#452A7C); */
+  display: flex;
+  flex-direction: row;
+  /* Rectangle 39 */
+
+box-shadow: 0px 1.1966px 29.915px rgba(69, 42, 124, 0.1);
+backdrop-filter: blur(35px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 40px;
+
+}
+
+.loginMainInfo{
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  /* padding: 100px; */
+  /* height: 100%; */
+  justify-content: flex-start;
+  align-items: center;
+  /* height: 100%; */
+  /* background-color: red; */
+  /* padding: 50px 0px ; */
+  /* background-color: red; */
+  
+}
+
+.loginMainInfo>img{
+  width: 90px;
+  height: 50px;
+  margin: 100px 0px 20px ;
+}
+
+.loginDetails{
+  
+  /* background-color: red; */
+  width: 400px;
+}
+
+.loginDetails>h3{
+  
+  
+/* Log in as */
+/* margin: 30px 0 0 30px; */
+
+font-family: 'Red Rose';
+font-style: normal;
+font-weight: 700;
+font-size: 30px;
+line-height: 37px;
+
+color: #000000;
+text-justify: center;
+text-align: center;
+/* margin: 30px 0 40px 0; */
+width: 100%;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+
+}
+
+.loginDetails>h3>span{
+  
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+}
+
+.loginDetails>h5{
+
+font-family: 'Red Rose';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 17px;
+letter-spacing: 0.02em;
+
+color: #000000;
+text-align: center;
+
+margin: 10px 0px 20px;
+
+}
+
+.loginDetails>div{
+  display: flex;
+  flex-direction: column;
+  /* Frame 192 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+margin: 30px 0px;
+/* gap: 15px; */
+
+/* position: absolute; */
+/* width: 390px;
+height: 79px; */
+
+
+}
+
+.loginDetails>div>label{
+  /*  */
+
+/* width: 102px;
+height: 24px; */
+padding: 0 0 10px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: -0.02em;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.loginDetails>div>select{
+
+  appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+padding: 10px;
+
+width: 100%;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 21px;
+/* identical to box height */
+
+color: #7C7C7C;
+/* border: 0px !important; */
+background-color: transparent;
+/* border:1px solid !important;
+border: 0px 0px 1px 0px; */
+/* border: 1px solid black; */
+border-bottom: 1px solid rgba(42, 82, 152, 0.3);
+}
+
+.loginDetails>div>select>option{
+  font-size: 18px;
+  height: 30px;
+  padding: 20px;
+}
+
+
+.loginDetails>div>button{
+  all: unset;
+  /* Frame 176 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 15px 160px;
+margin: 30px 0px;
+
+
+background: #2A5298;
+border-radius: 16px;
+color: white;
+
+/* Log in */
+
+
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+}
+
+
+select:not(:-internal-select-author-button) {
+  border: none;;
+}
+
+.loginDetails>div>select>option{
+  border: none;
+}
+
+.loginDetails>div>select>option{
+  
+}
+
+/* .loginDetails>div>select>option{
+  background-color: red;
+} */
+
+.loginDetails>div>select:focus{
+  outline: none;
+}
+/* Rectangle 30 */
+
+
+
+/* input {-webkit-appearance: none; box-shadow: none !important; }
+:-webkit-autofill { color: #fff !important; } */
+
+.loginDetails>div>input:focus{
+  /* all:; */
+outline: 0px;
+filter: drop-shadow(0px 2px 8px rgba(0, 0, 0, 0.2));
+
+}
+
+.loginDetails>div>input{
+  appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+padding: 10px;
+
+width: 100%;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 21px;
+/* identical to box height */
+
+color: #7C7C7C;
+/* border: 0px !important; */
+background-color: transparent;
+/* border:1px solid !important;
+border: 0px 0px 1px 0px; */
+/* border: 1px solid black; */
+border-bottom: 1px solid rgba(42, 82, 152, 0.3) !important;
+}
+
+.dailPadMain{
+  width: 50%;
+  /* height: 100%; */
+  /* background-color: red; */
+  /* padding: 100px; */
+}
+
+.dailPad{
+  margin: 100px 150px;
+  /* background-color: red; */
+}
+
+/* ph:arrow-up-bold */
+
+
+.dailPad>button{
+  all: unset;
+}
+
+.dailPad>div{
+  /* width: px; */
+  /* height: 450px; */
+  background-color: red;
+  /* Frame 26085439 */
+
+/* Frame 4585 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+align-items: center;
+justify-content: center;
+padding: 40px 10px;
+gap: 10px;
+
+
+background: rgba(42, 82, 152, 0.2);
+border-radius: 23px;
+
+
+
+}
+
+/* Dial Pad Numbers */
+
+
+
+
+.dialBtn{
+  /* Number */
+
+/* Number */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+/* padding: 7.70266px 22.0076px; */
+margin: 5px;
+
+width: 60px;
+height: 60px;
+
+background: rgba(42, 82, 152, 0.5);
+border-radius: 100%;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+/* 1 */
+
+/* width: 9px;
+height: 29px; */
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 24px;
+line-height: 29px;
+
+color: #FFFFFF;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+cursor: pointer;
+
+
+}
+
+.dialBtn:hover{/* Number */
+
+
+
+background: #646464;
+}
+
+
+.backspaceDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 230px;
+  justify-content: flex-end;
+  /* background-color: red; */
+
+}
+
+.entertBtnDial{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px;
+gap: 4px;
+
+width: 60px;
+height: 60px;
+
+background: #2A5298;
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+border-radius: 40px;
+flex: none;
+cursor: pointer;
+
+}
+
+.backspaceBtn{
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;cursor: pointer;
+  /* position: relative; */
+}
+
+.backspaceBtn>img{
+  width: 45px;
+  height: 45px;
+  /* position: absolute; */
+  right: 0px;
+  /* top: 40`px; */
+  /* margin: ; */
+}
+
+.noDialPadScreen{
+  width: 50%;
+  height: 100%;
+  /* background-color: green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* The Next-Gen Traffic Management System by Vinayan */
+.noDialPadScreen>p{
+width: 300px;
+
+font-family: 'Red Rose';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 139%;
+/* or 33px */
+text-align: center;
+
+color: #000000;
+
+}
+
+
+
+
+/* css for the login page */
+/* Frame 192 */
+
+/* *************************************************************** */
+
+
+/* css for the header */
+
+/* ***************************************************************************** */
+
+.mainNavBar{
+  width: 100%;
+  /* background-color: red; */
+  /* height: 50px; */
+  display: flex;
+  flex-direction: row;
+  padding: 30px 100px 0px;
+}
+
+.allLinks{
+  display: flex;
+  flex-direction: row;
+  padding-left: 150px;
+}
+
+.navLinkk{
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 50px;
+gap: 10px;
+
+/* position: absolute;
+width: 164px;
+height: 45px;
+left: 174px;
+top: 0px; */
+
+border-radius: 21px;
+
+
+
+font-family: 'Red Rose';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+}
+
+
+.navLinkk-selected{
+  /* Nav Bar */
+
+/* position: absolute;
+width: 686px;
+height: 45px;
+left: calc(50% - 686px/2 + 30px);
+top: 30px; */
+/* Frame 2 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 50px;
+gap: 10px;
+
+
+background: rgba(42, 82, 152, 0.2);
+border: 1px solid #2A5298;
+border-radius: 17px;
+
+
+/* Dashboard */
+
+/* width: 108px; */
+/* height: 25px; */
+
+font-family: 'Red Rose';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 25px;
+/* identical to box height */
+
+color: #2A5298;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+
+}
+
+
+/* css for navbar end */
+
+/* ******************************************************************************** */
+
+.mainDashboard{
+  width: 100%;
+  height: 500px;
+  margin: 50px 0px 0px 0px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  align-items :center;
+  justify-content: space-evenly;
+  /* display: inline-flex; */
+}
+
+.mainScreen{
+  width: 864px;
+  /* width: calc(100%-280px); */
+  display: inline-flex;
+  height: 100%;
+background: #D6D6D6;
+border-radius: 6px;
+
+
+}
+
+.sliderMain{
+  height: 100%;
+  width: 280px;
+  background-color: red;
+}
+
+
+/* css for profile page */
+
+/* ******************************************************************* */
+
+
+.profileMainComponent{
+  /* width: 95%; */
+  padding: 50px 100px;
+  height: 80%;
+  background-color: red;
+  margin:50px 20px 20px 20px;
+
+  /* Rectangle 39 */
+
+box-sizing: border-box;
+
+
+background: #FFFFFF;
+box-shadow: 0px 1.1966px 29.915px rgba(69, 42, 124, 0.1);
+backdrop-filter: blur(35px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 40px;
+
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+align-items: flex-start;
+justify-content: space-between;
+}
+
+.profileInpCont{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 50px 0px 0px 0px;
+  /* margin: 0 30px; */
+}
+
+/* Operator */
+
+.profileInpCont>label,.majorLabel{
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: -0.02em;
+
+color: #494949;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+/* BOX */
+.profileInpCont>input,.majorInpFeild{
+  height: 50px;
+  margin: 10px 0px;
+  /*  */
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 21px;
+/* identical to box height */
+
+color: #7C7C7C;
+border-bottom: 1px solid ;
+/* Rectangle 30 */
+
+box-sizing: border-box;
+
+padding: 5px;
+
+/* /* Rectangle 30 */
+
+box-sizing: border-box;
+
+border-bottom: 1px solid rgba(42, 82, 152, 0.3);
+border-radius: 1px;
+
+
+}
+
+
+.profileBtnCont{
+  width: 100%;
+  height: 100px;
+  margin: 30px 0px ;
+  /* background-color: red; */
+}
+
+.majorEditBtn{
+/* Edit to Save */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 13px 45px;
+gap: 10px;
+
+
+
+border: 2px solid #2A5298;
+border-radius: 10px;
+
+
+/* Edit */
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: 0.02em;
+
+color: #2A5298;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.profileInpCont>input:focus,.majorInpFeild:focus{
+  outline: 0px;
+  border-bottom: 1px solid rgba(42, 82, 152, 0.3);
+  filter: drop-shadow(0px 1.1966px 29.915px rgba(69, 42, 124, 0.1)) !important;
+}
+
+
+/* css for confriguration page */
+
+
+
+/* **********************************************************************************8 */
+
+
+.mainConfriguraution{
+  margin: 50px 20px 20px 20px;
+  width: calc(100%-40px);
+  height: 80%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sideTabs{
+  width: 250px;
+  height: 100%;
+  margin-left: 10px ;
+  /* background-color:black; */
+}
+
+.mainContentOfTabs{
+  width:75%;
+  height: 100%;
+  background-color: yellow;
+
+  /* Rectangle 39 */
+
+box-sizing: border-box;
+background: #FFFFFF;
+box-shadow: 0px 1.1966px 29.915px rgba(69, 42, 124, 0.1);
+backdrop-filter: blur(35px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 40px;
+
+padding: 50px;
+}
+
+
+/* Frame 174 */
+
+.sideTabs>div{
+  cursor: pointer;
+  /* Lidar */
+
+/* width: 51px; */
+height: 60px;
+/* background-color: red; */
+text-align: center;
+
+
+font-family: 'Red Rose';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 60px;
+margin: 10px;
+/* identical to box height */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+}
+
+.confrigutaionActiveBtn{
+background: rgba(42, 82, 152, 0.25);
+border-radius: 17px;
+color: #2A5298 !important;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+/* camera setting csss */
+
+.CameraMainDiv,.lidarMainDiv{
+  width: 60%;
+}
+
+
+
+.CameraMainDiv>div:first-child,.lidarMainDiv>div:first-child{
+  display: flex;
+  flex-direction: column;
+}
+
+.CameraMainDiv>div:first-child>label{
+  margin: 0 0 20px 0;
+}
+
+.CameraMainDiv>div:first-child>input{
+  height: 60px !important;
+}
+
+.CameraMainDiv>div:nth-child(2){
+  margin: 200px 0px 0px ;
+}
+
+
+/* lidar setting css */
+
+.lidarMainDiv{
+  width: 60%;
+  height: 100%;
+  /* background-color: red; */
+}
+
+.lidarMainDiv>div:first-child>label{
+  margin: 0 0 20px 0;
+}
+
+.lidarMainDiv>div:first-child>input{
+  height: 60px !important;
+}
+
+.mainModeDiv{
+  margin: 40px 0px 0px ;
+}
+
+.mainModeDiv>label{
+
+}
+
+.radioInpField:first-child{
+  
+  margin-top: 40px;
+}
+
+.radioInpField{
+  height: 40px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+
+
+
+.radioInpField>input[type="radio"]{
+  all: unset;
+width: 30px;
+height: 30px;
+border-radius: 100%;
+
+background: #DCDCDC;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+cursor: pointer;
+
+}
+
+
+.radioInpField>input[type="radio"]:checked{
+  /* Frame 178 */
+  all: unset;
+
+/* Frame 178 */
+/* Frame 178 */
+
+width: 26px;
+height: 26px;
+border-radius: 100%;
+
+
+/* Inside auto layout */
+
+
+background: #FFFFFF;
+border: 2px solid #2A5298;
+box-shadow:inset 0px 0px 0px 5px white;
+
+
+/* Ellipse 11 */
+
+background: #2A5298;
+
+
+}
+
+
+
+
+.radioInpField>label{
+  /* height: 40px !important; */
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 40px;
+letter-spacing: -0.02em;
+
+color: #494949;
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 0 0 0 10px;
+/* padding: 10px ;  */
+}
+
+.editCont{
+  margin: 50px 0 0 0;
+}
+
+/* css for speed setting */
+
+.speedSettingMainDiv{
+  width: 100%;
+  height: 100%;
+ 
+  /* background-color: red; */
+}
+
+.speedSettingMainDiv>div:first-child{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 60%;
+}
+
+
+.speedInpFieldCont{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  position: relative;
+}
+
+.speedInpFieldCont>label{
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  /* justify-content: center; */
+
+}
+
+.speedInpFieldCont>label>img{
+  margin: 0 10px 0px 0px;
+}
+
+.speedInpFieldCont>input[type="number"]{
+  /* all: unset; */
+  height: 80px;
+  font-size: 30px;
+/* Property 1=Frame 183 */
+
+
+
+}
+
+.incDecBtns{
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 40px;
+  height: 80px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+
+.incDecBtns>button{
+/* Frame 26085455 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 4px 6px;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+height: 25px;
+gap: 10px;
+
+
+
+background: #DCDCDC;
+border-radius: 4px;
+transform: matrix(1, 0, 0, -1, 0, 0);
+
+}
+
+.none{
+  display: none;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* css for confrigutaionss end */
+
+/* ***********************************************************************************8 */
+
+.recordsMainDiv{
+  width: calc(100%-30px);
+  margin:50px 15px 20px;
+  height: 100%;
+  /* background-color: red; */
+}
+
+.recordNav{
+  /* Frame 86 */
+/* Rectangle 29 */
+
+box-sizing: border-box;
+height: 65px;
+border: 1px solid rgba(42, 82, 152, 0.5);
+border-radius: 10px;
+display: flex;
+justify-content: space-between;
+
+}
+
+.recordNavLeftPart{
+  /* width: 40%; */
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.recordNavLeftPart>div{
+  /* Grid or List */
+/* Grid or List */
+
+/* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+
+filter: drop-shadow(rgba(0, 0, 0, 0.25),0px 4px 4px);
+
+  margin: 0 10px 0 30px;
+  width: 40px;
+  cursor: pointer;
+}
+
+.recordNavLeftPart>button{
+  display: flex;
+  flex-direction: row;
+  width: 150px;
+  /* Frame 83 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 5px 10px;
+gap: 16px;
+
+
+
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+letter-spacing: 0.02em;
+
+color: #494949;
+
+
+
+
+
+
+}
+
+.recordNavRightPart{
+  /* width: 40%; */
+  height: 100%;
+  display: flex;
+  padding: 7.5px 10px;
+  /* background-color: green; */
+}
+
+
+.recordNavRightPart>button{
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px 16px;
+gap: 15px;
+
+
+
+border: 2px solid #2A5298;
+border-radius: 10px;
+
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 22px;
+line-height: 27px;
+/* identical to box height */
+letter-spacing: 0.02em;
+
+color: #2A5298;
+
+}
+
+.paginationDiv{
+  /* width: 200px; */
+  height: 100%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: row;
+}
+
+.paginationDiv>button{/* iconamoon:arrow-up-2 */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 16px 15.75px;
+gap: 10px;
+margin: 0 30px 0px;
+
+/* width: 44px;
+height: 38.25px; */
+
+background: rgba(42, 82, 152, 0.6);
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.paginationDiv>p{
+  /* width: 40px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height:100%;
+letter-spacing: 0.02em;
+
+color: #494949;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+.selectedp{
+  /* background-color: red;Frame 26085525 */
+
+  box-sizing: border-box;
+  
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 16px;
+  gap: 10px;
+  
+  border: 1px solid rgba(42, 82, 152, 0.6);
+  border-radius: 4px;
+  
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  
+}
+
+/* css for table */
+
+.tableMainDiv{
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  /* position: absolute; */
+  overflow-x: scroll;
+
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  min-width: 200px;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+th:first-child, td:first-child,
+th:last-child, td:last-child {
+  position: sticky;
+  background-color: #f2f2f2; /* Background color for fixed columns */
+  z-index: 1; /* Ensure the fixed columns appear above other columns */
+}
+th:first-child, td:first-child {
+  left: 0;
+}
+th:last-child, td:last-child {
+  right: 0;
+}
