@@ -36,7 +36,7 @@ const Profile = () => {
   return (
     <div className='profileMainComponent'>
       <div className='profileInpCont'>
-        <label>Operator</label>
+        <label>Operator Name</label>
         <input type='text' disabled={!editable} value={oprInfo.op_name}
         onChange={(e)=>{
           let newOpr = {...oprInfo,op_name:e.target.value}

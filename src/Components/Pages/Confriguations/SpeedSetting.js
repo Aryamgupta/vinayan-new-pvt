@@ -13,7 +13,6 @@ const SpeedSetting = () => {
   const [editable, setEditable] = useState(false);
   const [carSpeed, setCarSpeed] = useState(0);
   const [twowheelerSpeed, setTwowheelerSpeed] = useState(0);
-  
   const [autoSpeed, setAutoSpeed] = useState(0);
   const [truckSpeed, setTruckSpeed] = useState(0);
   const [busSpeed, setBusSpeed] = useState(0);

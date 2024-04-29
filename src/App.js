@@ -12,7 +12,7 @@ import { useState } from "react";
 function App() {
 
   // const location = useLocation();
-  const [isNavBar, setIsNavBar] = useState(true);
+  const [isNavBar, setIsNavBar] = useState(false);
 
   // console.log(location);
   localStorage.setItem("x-isense-token","17ba650ba063931c56a9f83d8a8018831304549fcc98d2a7ffefb27196c46965");
