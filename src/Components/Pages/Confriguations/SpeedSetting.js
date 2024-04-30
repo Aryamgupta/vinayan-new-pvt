@@ -9,7 +9,7 @@ import incIcon from "./Icons/inc.png";
 import decIcon from "./Icons/dec.png";
 import axios from "axios";
 
-const SpeedSetting = () => {
+const SpeedSetting = ({setLoading}) => {
   const [editable, setEditable] = useState(false);
   const [carSpeed, setCarSpeed] = useState(0);
   const [twowheelerSpeed, setTwowheelerSpeed] = useState(0);
@@ -28,6 +28,7 @@ const SpeedSetting = () => {
   }
 
   const fetchAllSpeed = async function(){
+    setLoading(true);
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -43,6 +44,7 @@ const SpeedSetting = () => {
       );
       allSpeeds[key][1](data.speed);
     }
+    setLoading(false);
   }
 
   useEffect(() => {
@@ -50,7 +52,7 @@ const SpeedSetting = () => {
   }, [])
 
   const setAllSpeed = async function () {
-
+    setLoading(true);
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -70,15 +72,7 @@ const SpeedSetting = () => {
       );
       allSpeeds[key][1](data.speed);
     }
-
-    console.log(
-      carSpeed,
-      twowheelerSpeed,
-      truckSpeed,
-      autoSpeed,
-      busSpeed,
-      mgvSpeed
-    );
+    setLoading(false);
   };
 
   const incInp = function (e, name) {

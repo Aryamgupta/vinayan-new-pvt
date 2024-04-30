@@ -2,11 +2,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
-const CameraSetting = () => {
+const CameraSetting = ({setLoading}) => {
   const [editable, setEditable] = useState(false);
   const [rtspUrl, setRtspUrl] = useState("");
 
   const fetchRTSPURl = async function(){
+    setLoading(true);
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -16,10 +17,12 @@ const CameraSetting = () => {
 
     const {data} = await axios.get("https://intuisense-mockserver.onrender.com/api/rstpconfig",config);
     setRtspUrl(data.rstp_url);
+    setLoading(false);
   }
   
 
   const saveRtspUrl = async function(){
+    setLoading(true);
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -33,6 +36,8 @@ const CameraSetting = () => {
 
     const {data} = await axios.post("https://intuisense-mockserver.onrender.com/api/rstpconfig",body,config);
     setRtspUrl(data.rstp_url);
+    setLoading(false);
+
 
   }
 

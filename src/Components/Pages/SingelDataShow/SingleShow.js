@@ -21,6 +21,7 @@ export const SingleShow = ({
   id,
   setTimeString,
   vehCategoryObj,
+  setLoading
 }) => {
   const [data, setData] = useState(null);
   const vehTypeArr = ["Private", "Commercial", "Electric"];
@@ -42,8 +43,6 @@ export const SingleShow = ({
   ]);
 
   const printIframe = async function (id) {
-    console.log(plotImage);
-    console.log(plateImg);
     const iframe = document.frames
       ? document.frames[id]
       : document.getElementById(id);
@@ -56,6 +55,7 @@ export const SingleShow = ({
   };
 
   const printChallan = async function () {
+    setLoading(true);
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -75,11 +75,14 @@ export const SingleShow = ({
     );
     setPlotImage(data.data.plot_image);
     setPlateImg(data.data.plate_image);
+    setLoading(false);
     printIframe("print");
+    
   };
 
   // api to get the data from the server by record Id
   const fetchData = async function () {
+    setLoading(true);
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -101,6 +104,7 @@ export const SingleShow = ({
     setSendServer(!data.data.isSendtoServer);
     setPlotImage(data.data.plot_image);
     setPlateImg(data.data.plate_image);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -267,10 +271,13 @@ export const SingleShow = ({
   }, [plotImage, plateImg]);
 
   useEffect(() => {
+    // setLoading(true);
     fetchData();
+    // setLoading(false);
   }, [id]);
 
   const saveSetting = async function () {
+    setLoading(true);
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -278,8 +285,6 @@ export const SingleShow = ({
           "17ba650ba063931c56a9f83d8a8018831304549fcc98d2a7ffefb27196c46965",
       },
     };
-
-    console.log(vehCategory);
 
     const body = {
       ocr: newOcr,
@@ -301,9 +306,11 @@ export const SingleShow = ({
     setSelectedVioArr(data.data.violations);
     setAbleToEdit(!data.data.isValidated);
     setSendServer(!data.data.isSendtoServer);
+    setLoading(false);
   };
 
   const approveReq = async function (body, messageString) {
+    setLoading(true);
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -329,9 +336,11 @@ export const SingleShow = ({
     setSelectedVioArr(data.data.violations);
     setAbleToEdit(!data.data.isValidated);
     setSendServer(!data.data.isSendtoServer);
+    setLoading(false);
   };
 
   const NotApprove = async function (message) {
+    setLoading(true);
     setTimeout(() => {
       setInfoModal({
         message: message,
@@ -339,9 +348,11 @@ export const SingleShow = ({
         onConfirm: () => {},
       });
     }, 0);
+    setLoading(false);
   };
 
   const approveRecord = async function () {
+
     setInfoModal({
       message: "Do you want to approve this vehicle record?",
       setInfoModal: setInfoModal,
@@ -353,9 +364,11 @@ export const SingleShow = ({
       onConfirm: approveReq,
       onNotConfirm: NotApprove,
     });
+
   };
 
   const sendtToServer = async function () {
+
     setInfoModal({
       message: "Do you want to send this vehicle record to server?",
       setInfoModal: setInfoModal,

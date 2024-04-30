@@ -3,10 +3,11 @@ import ocrIcon from "./Images/SliderPCr.png";
 import speedIcon from "./Images/sliderSpeed.png";
 import axios from "axios";
 
-const Dashboard = () => {
+const Dashboard = ({loading, setLoading}) => {
   const [recordData, setRecordData] = useState([]);
 
   const fetchAllRecords = async function () {
+    setLoading(true);
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -20,6 +21,7 @@ const Dashboard = () => {
       config
     );
     setRecordData(data.data);
+    setLoading(false);
     // console.log(data.data);
   };
 

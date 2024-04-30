@@ -9,7 +9,7 @@ import ReactCodeInput from "react-code-input";
 import { StatefulPinInput } from "react-input-pin-code";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({setIsNavBar}) => {
+const Login = ({setIsNavBar ,loading, setLoading}) => {
   const [isDialPadOpen, setIsDialPadOpen] = useState(false);
   const [selectedUser, setSelectedUser] = useState(0);
   const [loginPin, setLoginPin] = useState("");

@@ -13,7 +13,7 @@ import { GifOverlay } from "./GifOverlay";
 import { SingleShow } from "../SingelDataShow/SingleShow";
 import { Filter } from "./Filter/Filter";
 
-const Records = () => {
+const Records = ({setLoading}) => {
   const [gridView, setGridView] = useState(false);
   const [isfilter, setIsfilter] = useState(false);
   const [recordData, setRecordData] = useState([]);
@@ -83,6 +83,7 @@ const Records = () => {
   };
 
   const fetchAllRecords = async function () {
+    setLoading(true);
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -97,6 +98,7 @@ const Records = () => {
     );
     setRecordData(data.data);
     // console.log(data.data);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -185,10 +187,11 @@ const Records = () => {
           setSingleView={setSingleView}
           setTimeString={setTimeString}
           vehCategoryObj={vehCategoryObj}
+          setLoading={setLoading}
         />
       )}
       {isfilter && (
-        <Filter setIsfilter={setIsfilter} vehCategoryObj={vehCategoryObj} />
+        <Filter setIsfilter={setIsfilter} vehCategoryObj={vehCategoryObj}   setLoading={setLoading}/>
       )}
     </>
   );

@@ -1,12 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
-const Profile = () => {
+const Profile = ({setLoading}) => {
   const [oprInfo, setOprInfo] = useState({});
   const [editable, setEditable] = useState(false);
 
   const fetchProfileInfo = async function(){
-
+    setLoading(true)
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -15,9 +15,11 @@ const Profile = () => {
     };
     const {data} = await axios.get("https://intuisense-mockserver.onrender.com/api/profile",config);
     setOprInfo(data);
+    setLoading(false)
   }
 
   const saveSetting = async function(){
+    setLoading(true)
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -27,6 +29,7 @@ const Profile = () => {
 
     const {data} = await axios.post("https://intuisense-mockserver.onrender.com/api/profile",oprInfo,config);
     setOprInfo(data);
+    setLoading(false)
   }
 
   useEffect(() => {

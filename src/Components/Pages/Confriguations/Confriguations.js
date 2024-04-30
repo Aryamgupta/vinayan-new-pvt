@@ -4,7 +4,7 @@ import CameraSetting from "./CameraSetting";
 import LidarSetting from "./LidarSetting";
 import SpeedSetting from "./SpeedSetting";
 
-const Confriguations = () => {
+const Confriguations = ({setLoading}) => {
   const [settingTab, setSettingTab] = useState("Camera");
 
   const settingTabFunc = function (e) {
@@ -38,9 +38,9 @@ const Confriguations = () => {
         </div>
       </div>
       <div className="mainContentOfTabs">
-        {settingTab === "Camera" && <CameraSetting />}
-        {settingTab === "Lidar" && <LidarSetting />}
-        {settingTab === "Speed" && <SpeedSetting />}
+        {settingTab === "Camera" && <CameraSetting setLoading={setLoading}/>}
+        {settingTab === "Lidar" && <LidarSetting setLoading={setLoading}/>}
+        {settingTab === "Speed" && <SpeedSetting setLoading={setLoading}/>}
       </div>
     </div>
   );

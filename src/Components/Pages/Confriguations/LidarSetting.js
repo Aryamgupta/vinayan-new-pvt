@@ -1,12 +1,13 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const LidarSetting = () => {
+const LidarSetting = ({setLoading}) => {
   const [editable, setEditable] = useState(false);
   const [lidarSetting, setLidarSetting] = useState({});
   const [modee, setModee] = useState(0);
 
   const fetchLidarSetting = async function () {
+    setLoading(true);
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -26,9 +27,12 @@ const LidarSetting = () => {
     else{
         setModee(2);
     }
+
+    setLoading(false);
   };
 
   const saveLidarSetting = async function(){
+    setLoading(true);
     const config = {
         headers: {
           "Content-Type": "application/json",
@@ -50,6 +54,7 @@ const LidarSetting = () => {
     else{
         setModee(2);
     }
+    setLoading(false);
   }
 
   
