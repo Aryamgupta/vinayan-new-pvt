@@ -234,9 +234,9 @@ export const SingleShow = ({
     <body>
     <div class="printMainContainer">
     <img class="logoImgClass" />
-    <img class="mainImgClass" src=${{plotImage}}/>
-    <img class="plateImgClass" src=${plateImg}/>
-    <div class="allEnteries">1
+    <img class="mainImgClass" src="${plotImage}"/>
+    <img class="plateImgClass" src="${plateImg}"/>
+    <div class="allEnteries">
         <div>
             <label>Name -</label>
             <div></div>
@@ -267,7 +267,7 @@ export const SingleShow = ({
 </div></body>
 </html>`;
     printDoc && printDoc.setAttribute("srcDoc", htmll);
-    console.log(printDoc);
+    // console.log(printDoc);
   }, [plotImage, plateImg]);
 
   useEffect(() => {
@@ -693,7 +693,6 @@ export const SingleShow = ({
       {plateImg ? (
         <iframe
           id="print"
-          // src={`http://localhost:8001/print/${id}`}
           style={{ position: "absolute", top: "-1000px", left: "-1000px" }}
           title="Print Challan"
         />
